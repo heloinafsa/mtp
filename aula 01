@@ -68,4 +68,51 @@ public class Welcomel {
     
    }
 }
+ ///////
+  */
+package mtp2019;
+
+/**
+ *
+ * @author ifg
+ */
+public class Mtp2019 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Estudante std = new Estudante();
+        std.nome = "maria";
+        std.notaCiencias = 8;
+        std.notaMatematica = 10;
+        std.notaPortugues = 9;
+        System.out.println(std.getMedia());
+        
+    }
+    
+}
+/
+ */
+package mtp2019;
+
+/**
+ *
+ * @author ifg
+ */
+public class Estudante {
+    
+    String nome;
+    double notaMatematica;
+    double notaPortugues;
+    double notaCiencias;
+    
+    public double getMedia(){
+
+        double result = 0;
+        result = (notaMatematica + notaPortugues + notaCiencias)/3;
+        return result;
+    }
+}
+
             
