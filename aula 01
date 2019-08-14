@@ -148,3 +148,69 @@ public class Estudante {
         return result;
     }
 }
+encapsulamento get/set :
+package mtp2019;
+
+/**
+ *
+ * @author ifg
+ */
+public class Estudante {
+    
+    public Estudante(){
+    }
+      Estudante(String nome){
+        this.nome = nome;
+    }
+    public Estudante(double notaMat, double notaPot, double notaCie){
+        this.notaMatematica = notaMat;
+        this.notaPortugues = notaPot;
+        this.notaCiencias = notaCie;
+    }
+    
+    private String nome;
+    public String getNome(){
+        return this.nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    private double notaMatematica;
+    private double notaPortugues;
+    private double notaCiencias;
+    
+    
+    
+    
+    
+    public double getMedia(){
+
+        double result = 0;
+        result = (notaMatematica + notaPortugues + notaCiencias)/3;
+        return result;
+    }
+}
+continue:
+package mtp2019;
+
+/**
+ *
+ * @author ifg
+ */
+public class Mtp2019 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Estudante std = new Estudante();
+        std.setNome ("maria");
+        std.setNotaCiencias (8);
+        std.setNotaMatematica (10);
+        std.setNotaPortugues (9);
+        System.out.println(std.getMedia());
+        
+    }
+    
+}
+
