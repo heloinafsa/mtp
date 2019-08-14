@@ -114,5 +114,37 @@ public class Estudante {
         return result;
     }
 }
+//
+ */
+package mtp2019;
 
-            
+/**
+ *
+ * @author ifg
+ */
+public class Estudante {
+    
+    public Estudante(){
+    }
+    public Estudante(String nome){
+        this.nome = nome;
+    }
+    public Estudante(double notaMat, double notaPot, double notaCie){
+        this.notaMatematica = notaMat;
+        this.notaPortugues = notaPot;
+        this.notaCiencias = notaCie;
+    }
+    
+    String nome;
+    double notaMatematica;
+    double notaPortugues;
+    double notaCiencias;
+    
+    
+    public double getMedia(){
+
+        double result = 0;
+        result = (notaMatematica + notaPortugues + notaCiencias)/3;
+        return result;
+    }
+}
